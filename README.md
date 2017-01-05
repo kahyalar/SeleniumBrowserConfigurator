@@ -14,7 +14,7 @@ It's so easy to install, just go to your pom.xml file and add these lines.
 	<dependency>
 	    <groupId>com.github.kahyalar</groupId>
 	    <artifactId>SeleniumBrowserConfigurator</artifactId>
-	    <version>1.1</version>
+	    <version>v1.1</version>
 	</dependency>
 ```  
 
@@ -28,21 +28,24 @@ Just create an object for screenshot:
    WebDriver driver = new ChromeDriver();
    SeleniumBrowserConfigurator configurator = new SeleniumBrowserConfigurator(driver);
 ```
+or you can static import to your current code!
 
 Than use the preset methods for your own PC:
 ```java
-maximizeChromeBrowserMBP13();
-maximizeChromeBrowserMBP15();
-maximizeChromeBrowseriMac5K();
-maximizeChromeBrowseriMac4K();
-maximizeChromeBrowseriMac();
-maximizeChromeBrowserWindows();
+maximizeBrowserForMBP13();
+maximizeBrowserForMBP15();
+maximizeBrowserForiMac5K();
+maximizeBrowserForiMac4K();
+maximizeBrowserForiMac();
+maximizeBrowserForWindows();
 ```
 
 For beginning i have only these methods. It can be implement a lot of like this.
 ```java
 //Use this:
-configurator.maximizeChromeDriverMBP13();
+configurator.maximizeBrowserForMBP13();
+//or
+SeleniumBrowserConfigurator.maximizeBrowserForMBP13();
 //Instead of this:
 driver.manage().window().setSize(new Dimension(1280, 800));
 driver.manage().window().setPosition(new Point(0, 0));
